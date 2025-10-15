@@ -1,6 +1,6 @@
 # 🧠 Pythy Assistant
 
-**Pythy** is a (modular features comming soon), command-line, part Narrow AI, part Real AI assistant built in Python. It combines casual conversation, games, Wikipedia summaries, and Gemini-powered AI chat — all wrapped in a clean, Python code.
+**Pythy** is a (modular features comming soon), command-line, part Narrow AI, part Gemini chat CLI assistant built in Python. It combines casual conversation, games, Wikipedia summaries, and Gemini-powered AI chat — all wrapped in a clean, Python code.
 
 ---
 
