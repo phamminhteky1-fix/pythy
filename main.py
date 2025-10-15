@@ -78,10 +78,18 @@ def respond(command, name):
         "random error":
             lambda: 
             print(random.choice(fallback_responses)),
-        "do you know clippy": lambda: print("Yes! He's friendly and helpful!"),
-        "do you know siri": lambda: print("Yes! But her soul is getting replaced by ChatGPT"),
-        "do you know chatgpt": lambda: print("Yes! But I may rather chat with Gemini."),
-        "do you know cortana": lambda: print("Yes! She is Clippy's facebook friend, but she is too young to die (Rest in peace!)")
+        "do you know clippy":
+            lambda:
+            print("Yes! He's friendly and helpful!"),
+        "do you know siri":
+            lambda:
+            print("Yes! But her soul is getting replaced by ChatGPT"),
+        "do you know chatgpt":
+            lambda:
+            print("Yes! But I may rather chat with Gemini."),
+        "do you know cortana":
+            lambda:
+            print("Yes! She is Clippy's facebook friend, but she is too young to die (Rest in peace!)")
     }
     for key in command_map:
         if key in command:
