@@ -15,5 +15,6 @@ def ensure_package(package_name):
 
 def cleanup_packages():
     for pkg in installed_temp:
+        print("WARNING: DO NOT TURN OFF OR PRESS CTRL+C AS IT WILL DISRUPT PROCESS")
         print(f"🧹 Uninstalling {pkg}...")
         subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", pkg])
