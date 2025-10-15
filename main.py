@@ -1,5 +1,7 @@
 from packageManager import ensure_package, cleanup_packages
+
 print("Setting up...")
+
 # Ensure required packages
 ensure_package("wikipedia")
 ensure_package("google-generativeai")
@@ -15,10 +17,10 @@ from aiFunctions import gemini_chat
 
 # Fallback responses
 fallback_responses = [
-    '📚 According to my huge amount of my dictionaries, I have no idea what you mean.'
-    "🎨 Creativity is endless, but to use it against me, it's an big NEVER (Exept if you are chatting with Gemini)"
-    "👽 Hullo, are you an alien? Please use my language."
-    "🤖 We never accept computer languages in this shell, exept you are changing me."
+    "📚 According to my huge amount of dictionaries, I have no idea what you mean.",
+    "🎨 Creativity is endless, but to use it against me, it's a big NEVER (Except if you are chatting with Gemini).",
+    "👽 Hullo, are you an alien? Please use my language.",
+    "🤖 We never accept computer languages in this shell, except if you are changing me."
 ]
 
 def show_help():
@@ -58,16 +60,29 @@ def respond(command, name):
         return
 
     command_map = {
-        "time": lambda: print(f"The time is {datetime.datetime.now().strftime('%H:%M')}"),
-        "date": lambda: print(f"Today's date is {datetime.date.today().strftime('%B %d, %Y')}"),
-        "open youtube": lambda: webbrowser.open("https://www.youtube.com"),
+        "time": 
+            lambda: 
+            print(f"The time is {datetime.datetime.now().strftime('%H:%M')}"),
+        "date": 
+            lambda: 
+            print(f"Today's date is {datetime.date.today().strftime('%B %d, %Y')}"),
+        "open youtube": 
+            lambda: 
+            webbrowser.open("https://www.youtube.com"),
         "open google": lambda: webbrowser.open("https://www.google.com"),
-        "chat": lambda: chatty(name),
+        "chat": 
+            lambda: 
+            chatty(name),
         "help": show_help,
         "real ai": gemini_chat,
-        "random": lambda: print(random.choice(fallback_responses))
+        "random error":
+            lambda: 
+            print(random.choice(fallback_responses)),
+        "do you know clippy": lambda: print("Yes! He's friendly and helpful!"),
+        "do you know siri": lambda: print("Yes! But her soul is getting replaced by ChatGPT"),
+        "do you know chatgpt": lambda: print("Yes! But I may rather chat with Gemini."),
+        "do you know cortana": lambda: print("Yes! She is Clippy's facebook friend, but she is too young to die (Rest in peace!)")
     }
-
     for key in command_map:
         if key in command:
             command_map[key]()
@@ -77,14 +92,15 @@ def respond(command, name):
     print('So, what about smashing that "help" command?')
 
 # === Startup ===
-print("All functions installed and set up.")
-name = input("👋 Hello! What's your name? ")
-print(f"Nice to meet you, {name}! I'm Pythy, your assistant.")
-show_help()
+if __name__ == "__main__":
+    print("All functions installed and set up.")
+    name = input("👋 Hello! What's your name? ")
+    print(f"Nice to meet you, {name}! I'm Pythy, your assistant.")
+    show_help()
 
-while True:
-    user_command = input(">> ")
-    if respond(user_command, name) == "exit":
-        print(f"👋 Bye for now, {name}! Pythy signing off. Stay curious!")
-        cleanup_packages()
-        break
+    while True:
+        user_command = input(">> ")
+        if respond(user_command, name) == "exit":
+            print(f"👋 Bye for now, {name}! Pythy signing off. Stay curious!")
+            cleanup_packages()
+            break
