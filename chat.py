@@ -67,5 +67,5 @@ def chatty(name):
             print("Chaos? Let’s flip the universe upside down!")
 
     else:
-        print("Invalid input! Picking a random style for you...")
+        print("Invalid input!")
         chatty(name)
