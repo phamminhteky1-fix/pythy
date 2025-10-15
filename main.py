@@ -15,16 +15,10 @@ from aiFunctions import gemini_chat
 
 # Fallback responses
 fallback_responses = [
-    "🤖 I'm not sure what that means, but it sounds mysterious.",
-    "🧠 That command flew right over my circuits!",
-    "💥 Boom! That’s not a valid command, but it sure made an impact.",
-    "🎩 I tip my virtual hat to your creativity.",
-    "🕵️‍♂️ That’s a secret code I haven’t cracked yet.",
-    "📼 Rewinding… nope, still don’t get it.",
-    "🛸 That command came from another galaxy.",
-    "🎲 Rolling the dice… and it landed on confusion.",
-    "📡 Signal lost. Try again, Commander.",
-    "🧃 That’s juicy… but not a valid command."
+    '📚 According to my huge amount of my dictionaries, I have no idea what you mean.'
+    "🎨 Creativity is endless, but to use it against me, it's an big NEVER (Exept if you are chatting with Gemini)"
+    "👽 Hullo, are you an alien? Please use my language."
+    "🤖 We never accept computer languages in this shell, exept you are changing me."
 ]
 
 def show_help():
@@ -80,6 +74,7 @@ def respond(command, name):
             return
 
     print(random.choice(fallback_responses))
+    print('So, what about smashing that "help" command?')
 
 # === Startup ===
 print("All functions installed and set up.")
