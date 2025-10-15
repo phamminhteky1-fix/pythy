@@ -1,6 +1,6 @@
 # 🧠 Pythy Assistant
 
-**Pythy** is a (modular features comming soon), command-line, part Narrow AI, part Real AI assistant built in Python. It combines casual conversation, games, Wikipedia summaries, and Gemini-powered AI chat — all wrapped in a clean, extensible architecture.
+**Pythy** is a (modular features comming soon), command-line, part Narrow AI, part Real AI assistant built in Python. It combines casual conversation, games, Wikipedia summaries, and Gemini-powered AI chat — all wrapped in a clean, Python code.
 
 ---
 
@@ -13,9 +13,11 @@
 - 🤖 **Gemini AI Chat**: Uses Google’s Gemini models with automatic failover
 - 🧹 **Temporary Package Management**: Installs missing packages at runtime and removes them when done (I have to add this "useless" feature to save my storage)
 - 
-## ❓  How to   use:
+## ❓  How to use:
 1. Clone my rep (DO NOT FORK!!!)
-2. Go to Google AI studio and create an API key.
+2. Go to Google AI studio and create an AI API key.
 3. touch .env and add an element: GEMINI_API_KEY=YOUR_API_KEY_HERE
 4. Run the main.py code thingy
 
+## Why you should never fork this repo
+I have seen very many outdated forks from everywhere at random Github profiles and repos. So, please clone, do not fork so you can always be updated. Each time I realease a new version of Pythy you can you git pull in ease.
